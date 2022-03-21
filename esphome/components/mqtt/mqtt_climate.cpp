@@ -121,6 +121,18 @@ void MQTTClimateComponent::send_discovery(JsonObject root, mqtt::SendDiscoveryCo
       swing_modes.add("vertical");
     if (traits.supports_swing_mode(CLIMATE_SWING_HORIZONTAL))
       swing_modes.add("horizontal");
+    if (traits.supports_swing_mode(CLIMATE_SWING_HIGHEST))
+      swing_modes.add("highest");
+    if (traits.supports_swing_mode(CLIMATE_SWING_HIGH))
+      swing_modes.add("high");
+    if (traits.supports_swing_mode(CLIMATE_SWING_MIDDLE))
+      swing_modes.add("middle");
+    if (traits.supports_swing_mode(CLIMATE_SWING_LOW))
+      swing_modes.add("low");
+    if (traits.supports_swing_mode(CLIMATE_SWING_LOWEST))
+      swing_modes.add("lowest");
+    if (traits.supports_swing_mode(CLIMATE_SWING_AUTO))
+      swing_modes.add("auto");
   }
 
   config.state_topic = false;
@@ -350,6 +362,24 @@ bool MQTTClimateComponent::publish_state_() {
         break;
       case CLIMATE_SWING_HORIZONTAL:
         payload = "horizontal";
+        break;
+      case CLIMATE_SWING_HIGHEST:
+        payload = "highest";
+        break;
+      case CLIMATE_SWING_HIGH:
+        payload = "high";
+        break;
+      case CLIMATE_SWING_MIDDLE:
+        payload = "middle";
+        break;
+      case CLIMATE_SWING_LOW:
+        payload = "low";
+        break;
+      case CLIMATE_SWING_LOWEST:
+        payload = "lowest";
+        break;
+      case CLIMATE_SWING_AUTO:
+        payload = "auto";
         break;
     }
     if (!this->publish(this->get_swing_mode_state_topic(), payload))

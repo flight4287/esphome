@@ -97,6 +97,12 @@ CLIMATE_SWING_MODES = {
     "BOTH": ClimateSwingMode.CLIMATE_SWING_BOTH,
     "VERTICAL": ClimateSwingMode.CLIMATE_SWING_VERTICAL,
     "HORIZONTAL": ClimateSwingMode.CLIMATE_SWING_HORIZONTAL,
+    'HIGHEST': ClimateSwingMode.CLIMATE_SWING_HIGHEST,
+    'HIGH': ClimateSwingMode.CLIMATE_SWING_HIGH,
+    'MIDDLE': ClimateSwingMode.CLIMATE_SWING_MIDDLE,
+    'LOW': ClimateSwingMode.CLIMATE_SWING_LOW,
+    'LOWEST': ClimateSwingMode.CLIMATE_SWING_LOWEST,
+    'AUTO': ClimateSwingMode.CLIMATE_SWING_AUTO,
 }
 
 validate_climate_swing_mode = cv.enum(CLIMATE_SWING_MODES, upper=True)

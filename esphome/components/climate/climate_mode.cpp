@@ -77,6 +77,18 @@ const LogString *climate_swing_mode_to_string(ClimateSwingMode swing_mode) {
       return LOG_STR("VERTICAL");
     case climate::CLIMATE_SWING_HORIZONTAL:
       return LOG_STR("HORIZONTAL");
+    case climate::CLIMATE_SWING_HIGHEST:
+      return LOG_STR("HIGHEST");
+    case climate::CLIMATE_SWING_HIGH:
+      return LOG_STR("HIGH");
+    case climate::CLIMATE_SWING_MIDDLE:
+      return LOG_STR("MIDDLE");
+    case climate::CLIMATE_SWING_LOW:
+      return LOG_STR("LOW");
+    case climate::CLIMATE_SWING_LOWEST:
+      return LOG_STR("LOWEST");
+    case climate::CLIMATE_SWING_AUTO:
+      return LOG_STR("AUTO");
     default:
       return LOG_STR("UNKNOWN");
   }

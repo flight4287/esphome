@@ -222,6 +222,18 @@ template<> const char *proto_enum_to_string<enums::ClimateSwingMode>(enums::Clim
       return "CLIMATE_SWING_VERTICAL";
     case enums::CLIMATE_SWING_HORIZONTAL:
       return "CLIMATE_SWING_HORIZONTAL";
+    case enums::CLIMATE_SWING_HIGHEST:
+      return "CLIMATE_SWING_HIGHEST";
+    case enums::CLIMATE_SWING_HIGH:
+      return "CLIMATE_SWING_HIGH";
+    case enums::CLIMATE_SWING_MIDDLE:
+      return "CLIMATE_SWING_MIDDLE";
+    case enums::CLIMATE_SWING_LOW:
+      return "CLIMATE_SWING_LOW";
+    case enums::CLIMATE_SWING_LOWEST:
+      return "CLIMATE_SWING_LOWEST";
+    case enums::CLIMATE_SWING_AUTO:
+      return "CLIMATE_SWING_AUTO";
     default:
       return "UNKNOWN";
   }

@@ -239,6 +239,18 @@ ClimateCall &ClimateCall::set_swing_mode(const std::string &swing_mode) {
     this->set_swing_mode(CLIMATE_SWING_VERTICAL);
   } else if (str_equals_case_insensitive(swing_mode, "HORIZONTAL")) {
     this->set_swing_mode(CLIMATE_SWING_HORIZONTAL);
+  } else if (str_equals_case_insensitive(swing_mode, "HIGHEST")) {
+    this->set_swing_mode(CLIMATE_SWING_HIGHEST);
+  } else if (str_equals_case_insensitive(swing_mode, "HIGH")) {
+    this->set_swing_mode(CLIMATE_SWING_HIGH);
+  } else if (str_equals_case_insensitive(swing_mode, "MIDDLE")) {
+    this->set_swing_mode(CLIMATE_SWING_MIDDLE);
+  } else if (str_equals_case_insensitive(swing_mode, "LOWEST")) {
+    this->set_swing_mode(CLIMATE_SWING_LOWEST);
+  } else if (str_equals_case_insensitive(swing_mode, "LOW")) {
+    this->set_swing_mode(CLIMATE_SWING_LOW);
+  } else if (str_equals_case_insensitive(swing_mode, "AUTO")) {
+    this->set_swing_mode(CLIMATE_SWING_AUTO);
   } else {
     ESP_LOGW(TAG, "'%s' - Unrecognized swing mode %s", this->parent_->get_name().c_str(), swing_mode.c_str());
   }

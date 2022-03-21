@@ -74,6 +74,18 @@ enum ClimateSwingMode : uint8_t {
   CLIMATE_SWING_VERTICAL = 2,
   /// The fan mode is set to Horizontal
   CLIMATE_SWING_HORIZONTAL = 3,
+  /// The fan mode is set to Horizontal highest
+  CLIMATE_SWING_HIGHEST = 4,
+  /// The fan mode is set to Horizontal high
+  CLIMATE_SWING_HIGH = 5,
+  /// The fan mode is set to Horizontal middle
+  CLIMATE_SWING_MIDDLE = 6,
+  /// The fan mode is set to Horizontal low
+  CLIMATE_SWING_LOW = 7,
+  /// The fan mode is set to Horizontal lowest
+  CLIMATE_SWING_LOWEST = 8,
+  /// The fan mode is set to Auto
+  CLIMATE_SWING_AUTO = 9,
 };
 
 /// Enum for all preset modes
